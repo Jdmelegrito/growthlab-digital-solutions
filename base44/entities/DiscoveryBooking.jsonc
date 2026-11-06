@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "task_created": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "email"
+  ],
+  "name": "DiscoveryBooking"
+}

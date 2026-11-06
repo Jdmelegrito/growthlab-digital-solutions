@@ -1,0 +1,49 @@
+{
+  "name": "ServiceOffering",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the service offering"
+    },
+    "description": {
+      "type": "string",
+      "description": "What the service covers and who it is for"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Web Development",
+        "Mobile App Development",
+        "POS System",
+        "Consulting"
+      ],
+      "enumColors": [
+        "blue",
+        "purple",
+        "green",
+        "yellow"
+      ],
+      "description": "Service category"
+    },
+    "starting_price": {
+      "type": "number",
+      "description": "Starting price in PHP"
+    },
+    "delivery_time": {
+      "type": "string",
+      "description": "Typical delivery timeline"
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Key features included"
+    }
+  },
+  "required": [
+    "name",
+    "description"
+  ]
+}

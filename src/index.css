@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-poppins: 'Poppins', sans-serif;
+    --font-inter: 'Inter', sans-serif;
+    --font-grotesk: 'Space Grotesk', sans-serif;
+
+    /* GrowthLab Minimalist Apple Palette: White Canvas (#FFFFFF), Charcoal Text (#0F172A), Accent Teal (#008F83) */
+    --background: 0 0% 100%; /* Crisp Pure White */
+    --foreground: 222 47% 11%; /* #0F172A Deep Slate */
+    --card: 210 40% 98%; /* #F8FAFC Subtle Off-white */
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 175 100% 28%; /* #008F83 GrowthLab Teal */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96.1%; /* #F1F5F9 */
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215 16% 47%; /* #64748B */
+    --accent: 175 100% 36%; /* #00B8A9 Highlight Teal */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214 32% 91%; /* #E2E8F0 */
+    --input: 214 32% 91%;
+    --ring: 175 100% 28%;
+    --chart-1: 175 100% 28%;
+    --chart-2: 175 100% 36%;
+    --chart-3: 210 40% 90%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.85rem;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 175 100% 28%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 96.1%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 175 100% 28%;
+  }
+
+  .dark {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --card: 210 40% 98%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 175 100% 28%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215 16% 47%;
+    --border: 214 32% 91%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-inter antialiased selection:bg-[#008F83]/15 selection:text-[#008F83];
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .glow-teal {
+    box-shadow: 0 4px 20px rgba(0, 143, 131, 0.15), 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+  .glow-teal-strong {
+    box-shadow: 0 10px 30px rgba(0, 143, 131, 0.25), 0 2px 6px rgba(0, 0, 0, 0.08);
+  }
+  .glass {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  }
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(20px);
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  }
+}
